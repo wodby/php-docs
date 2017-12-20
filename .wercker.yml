@@ -7,8 +7,7 @@ build:
       code: |
         pip install mkdocs
         pip install markdown-include
-        cd docs
-        ./build.sh
+        cd docs && ./build.sh
 
 push:
   box:
