@@ -1,3 +1,5 @@
+box: wodby/alpine:3.7-1.1.1
+
 build:
   box:
     id: python:alpine
@@ -31,9 +33,6 @@ release:
       cmd: nginx -g 'daemon off;'
 
 deploy:
-  box:
-    id: wodby/alpine:3.7-1.1.1
-    cmd: /bin/sh
   steps:
     - script:
       name: deployment
