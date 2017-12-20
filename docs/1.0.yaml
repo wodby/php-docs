@@ -1,0 +1,43 @@
+site_name: PHP stack documentation
+site_url:
+repo_url: https://github.com/wodby/php-docs
+site_description: PHP stack documentation
+site_author: Wodby Inc
+copyright: Wodby Inc
+
+# output directory:
+site_dir: ../build/docs/1.0
+docs_dir: "1.0"
+
+theme: readthedocs
+theme_dir: theme
+markdown_extensions:
+  - markdown_include.include
+  - admonition
+  - def_list
+  - footnotes
+extra_css: []
+extra_javascript: []
+extra:
+    version: 1.0
+pages:
+    - Overview: index.md
+    - Deployment: deployment.md
+    - Import: import.md
+    - Instance types: instance-types.md
+    - Local environment: local-environment.md
+    - Mail delivery: mail-delivery.md
+    - Containers:
+      - Apache: containers/apache.md
+      - Blackfire: containers/blackfire.md
+      - Cron: containers/cron.md
+      - Nginx: containers/nginx.md
+      - Node.js: containers/nodejs.md
+      - MariaDB: containers/mariadb.md
+      - PHP: containers/php.md
+      - Rsyslog: containers/rsyslog.md
+      - Redis: containers/redis.md
+      - Solr: containers/solr.md
+      - SSH: containers/ssh.md
+      - Varnish: containers/varnish.md
+      - Webgrind: containers/webgrind.md
