@@ -28,7 +28,7 @@ release:
       registry: https://registry.hub.docker.com/v2
       username: $DOCKER_USERNAME
       password: $DOCKER_PASSWORD
-      repository: wodby/docs
+      repository: wodby/php-docs
       tag: latest, $WERCKER_GIT_BRANCH
       cmd: nginx -g 'daemon off;'
 
