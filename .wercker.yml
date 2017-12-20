@@ -12,7 +12,7 @@ build:
         ls -la
         ./build.sh
 
-push:
+release:
   box:
     id: nginx:alpine
     cmd: /bin/sh
@@ -34,7 +34,7 @@ push:
       tag: latest, $WERCKER_GIT_BRANCH
       cmd: nginx -g 'daemon off;'
 
-deployment:
+deploy:
   steps:
     - script:
       name: deployment

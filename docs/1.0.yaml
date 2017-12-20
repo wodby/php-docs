@@ -9,8 +9,9 @@ copyright: Wodby Inc
 site_dir: ../build/docs/1.0
 docs_dir: "1.0"
 
-theme: readthedocs
-theme_dir: theme
+theme:
+  name: readthedocs
+  custom_dir: theme
 markdown_extensions:
   - markdown_include.include
   - admonition
