@@ -1,5 +1,3 @@
-box: wodby/alpine:3.7-1.1.1
-
 build:
   box:
     id: python:alpine
@@ -15,17 +13,15 @@ build:
         ./build.sh
 
 release:
+  box:
+    id: wodby/nginx:1.13-3.0.2
+    cmd: /bin/sh
   steps:
-    - script:
-      name: install dependencies
-      code: |
-        apk add --update curl bash
     - script:
       name: mv static files
       code: |
-        ls -la
         rm -rf /usr/share/nginx/html/*
-        mv $WERCKER_SOURCE_DIR/build/* /usr/share/nginx/html
+        mv build/* /usr/share/nginx/html
     - internal/docker-push:
       registry: https://registry.hub.docker.com/v2
       username: $DOCKER_USERNAME
@@ -35,6 +31,9 @@ release:
       cmd: nginx -g 'daemon off;'
 
 deploy:
+  box:
+    id: wodby/alpine:3.7-1.1.1
+    cmd: /bin/sh
   steps:
     - script:
       name: deployment
