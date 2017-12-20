@@ -30,6 +30,7 @@ release:
       password: $DOCKER_PASSWORD
       repository: wodby/php-docs
       tag: latest, $WERCKER_GIT_BRANCH
+      cmd: nginx -g 'daemon off;'
 
 deploy:
   steps:
