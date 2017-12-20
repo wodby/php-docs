@@ -12,7 +12,6 @@ build:
         pip install markdown-include
         apk add --update bash
         cd docs
-        ls -la
         ./build.sh
 
 release:
@@ -24,6 +23,7 @@ release:
     - script:
       name: mv static files
       code: |
+        ls -la
         rm -rf /usr/share/nginx/html/*
         mv $WERCKER_SOURCE_DIR/build/* /usr/share/nginx/html
     - internal/docker-push:
