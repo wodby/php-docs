@@ -1,6 +1,9 @@
-box: python:alpine
+box: wodby/alpine:3.7-1.1.1
 
 build:
+  box:
+    id: python:alpine
+    cmd: /bin/sh
   steps:
     - script:
       name: build
@@ -13,9 +16,6 @@ build:
         ./build.sh
 
 release:
-  box:
-    id: nginx:alpine
-    cmd: /bin/sh
   steps:
     - script:
       name: install dependencies
