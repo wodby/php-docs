@@ -23,7 +23,8 @@ release:
       name: mv static files
       code: |
         rm -rf /usr/share/nginx/html/*
-        mv $WERCKER_SOURCE_DIR/build/* /usr/share/nginx/html
+        mkdir -p /usr/share/nginx/html/stacks/php
+        mv $WERCKER_SOURCE_DIR/build/* /usr/share/nginx/html/stacks/php
     - internal/docker-push:
       registry: https://registry.hub.docker.com/v2
       username: $DOCKER_USERNAME
