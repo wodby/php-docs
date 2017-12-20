@@ -7,7 +7,10 @@ build:
       code: |
         pip install mkdocs
         pip install markdown-include
+        apk add --update bash
+        cd docs
         ls -la
+        ./build.sh
 
 push:
   box:
