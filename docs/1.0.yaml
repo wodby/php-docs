@@ -14,7 +14,7 @@ theme:
   custom_dir: theme
 markdown_extensions:
   - markdown_include.include
-  - admonition
+  - markdown.extensions.admonition
   - def_list
   - footnotes
 extra_css: []
