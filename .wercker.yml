@@ -10,8 +10,7 @@ build:
       code: |
         pip install mkdocs mkdocs-material markdown==2.6.7 markdown-include
         apk add --update bash
-        cd docs
-        ./build.sh
+        mkdocs build
 
 release:
   box:
