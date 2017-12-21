@@ -32,6 +32,7 @@ pages:
       - Nginx: containers/nginx.md
       - MariaDB: containers/mariadb.md
       - Memcached: containers/memcached.md
+      - OpenSMTPD: containers/opensmtpd.md
       - PHP: containers/php.md
       - PostgreSQL: containers/postgres.md
       - Rsyslog: containers/rsyslog.md
