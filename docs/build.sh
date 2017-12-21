@@ -10,7 +10,7 @@ rm -f latest.yaml
 
 for conf_file in $(ls *.yaml | sort); do
     echo "Building docs version --> $conf_file"
-    mkdocs build --config-file $conf_file || exit $?
+    mkdocs build -v --config-file $conf_file || exit $?
 done
 
 # drop the 'latest.yml' symlink to the latest version so `mkdocs serve` will
