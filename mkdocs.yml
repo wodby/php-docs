@@ -14,6 +14,7 @@ markdown_extensions:
   - markdown.extensions.admonition
   - def_list
   - footnotes
+  - codehilite
 extra_css: []
 extra_javascript: []
 extra:

@@ -8,7 +8,7 @@ build:
     - script:
       name: build
       code: |
-        pip install mkdocs mkdocs-material markdown==2.6.7 markdown-include
+        pip install mkdocs mkdocs-material markdown==2.6.7 markdown-include pygments
         apk add --update bash
         mkdocs build
 
@@ -21,8 +21,8 @@ release:
       name: mv static files
       code: |
         rm -rf /usr/share/nginx/html/*
-        mkdir -p /usr/share/nginx/html/stacks/php
-        mv $WERCKER_SOURCE_DIR/site/* /usr/share/nginx/html/stacks/php
+        mkdir -p /usr/share/nginx/html/stacks/php/docs
+        mv $WERCKER_SOURCE_DIR/site/* /usr/share/nginx/html/stacks/php/docs
     - internal/docker-push:
       registry: https://registry.hub.docker.com/v2
       username: $DOCKER_USERNAME
