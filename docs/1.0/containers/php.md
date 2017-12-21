@@ -1,24 +1,10 @@
 # PHP
 
-* [PHP environment variables](https://github.com/wodby/php#environment-variables)
-* [Extensions](https://github.com/wodby/php#php-extensions)
+You can configure PHP via environment variables that listed at [https://github.com/wodby/php](https://github.com/wodby/php#environment-variables)
 
 ## Composer
 
 Composer package `hirak/prestissimo:^0.3` installed globally for www-data user to download dependencies in parallel.
-
-## Drush
-
-PHP container comes with pre-installed drush. You can execute drush commands remotely via drush aliases. Download drush aliases from `Profile > Misc > Drush aliases` page and place them to `~/.drush`. Execute commands (replace `[tokens]` with the real values) like this:
-
-```bash
-$  drush @[organization].[application].[instance] [drush command]
-```
-
-## Drupal Console
-
-PHP container comes with installed drupal console launcher (not the same as drupal console), the launcher used to be able run drupal console without specified the full path to it. Please note that starting Drupal Console ~1.0 you have to install it manually (via composer) per project.
-
 
 ## Environment variables
 
@@ -29,22 +15,10 @@ In addition to [global environment variables](https://docs.wodby.com/infrastruct
 | `$APP_ROOT`           | `/var/www/html` by default                                       |
 | `$HTTP_ROOT`          | e.g. `/var/www/html/web`                                         |
 | `$WODBY_DIR_CONF`     | `/var/www/conf` by default                                       |
-| `$DRUPAL_SITE`        | Drupal site directory, e.g. `default`                            |
 | `$WODBY_APP_NAME`     | My app                                                           |
 | `$WODBY_HOST_PRIMARY` | example.com                                                      |
 | `$WODBY_URL_PRIMARY`  | http://example.com                                               |
 | `$WODBY_HOSTS`        | `[ "example.com", "dev.example.org", "dev.example.org.wod.by" ]` |
-
-> Some environment variables used by PHP may be overriden in [`wodby.settings.php`](#settings-php) file
-
-Deprecated variables:
-
-| Variable             | Instead use       |
-| -------------------- | ----------------- |
-| `$WODBY_APP_ROOT`    | `$APP_ROOT`       |
-| `$WODBY_APP_DOCROOT` | `$HTTP_ROOT`      |
-| `$WODBY_CONF`        | `$WODBY_DIR_CONF` |
-| `$WODBY_APP_SUBSITE` | `$DRUPAL_SITE`    |
 
 ## Remote debugging
 

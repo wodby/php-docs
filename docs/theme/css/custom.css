@@ -84,6 +84,9 @@ code {
 
 .sidebar li ul li span {
     color: #b3b3b3;
+    font-size: 100%;
+    padding-left: 1em;
+    font-weight: bolder;
 }
 
 /* Theme overrides
