@@ -26,6 +26,7 @@ pages:
     - Local environment: local.md
     - Containers:
       - Apache: containers/apache.md
+      - AthenaPDF: containers/athenapdf.md
       - Blackfire: containers/blackfire.md
       - Cron: containers/cron.md
       - Nginx: containers/nginx.md
