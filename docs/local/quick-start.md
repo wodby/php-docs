@@ -1,6 +1,6 @@
 # Quick start
 
-!!! danger "Your database data":
+!!! danger "Persistence of database data":
     You will lose MariaDB / PostgreSQL data if you run `docker-compose down`. Instead use `docker-compose stop` to stop containers. Alternatively, you can use a manual volume for mariadb data (see compose file), this way your data will always persist. 
 
 1. Download `docker-compose.yml` file from the [latest stable release](https://github.com/wodby/docker4php/releases) to your PHP project root
@@ -20,7 +20,7 @@ docker-compose stop
 !!! tip "Permissions issues":
     To avoid potential problems with permissions between your host and containers please follow [these instructions](permissions.md)
 
-!!! tip "For macOS users":
+!!! info "For macOS users":
     Out of box Docker for Mac volumes has poor performance. However there are workarounds, read more [here](docker-for-mac.md)
 
 Feel free to adjust volumes and ports in the compose file for your convenience. 

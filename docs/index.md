@@ -1,7 +1,7 @@
 # Overview
 
 !!! info "IMPORTANT":
-    PHP stack is not yet generally available for deployment via Wodby Platform. But you already can use it for local development with [Docker4PHP](local/index.md)
+    PHP stack is not yet available for deployment via [Wodby](https://wodby.com). But you already can use it for local development with [Docker4PHP](local/index.md)
 
 [Nginx]: containers/nginx.md
 [Apache]: containers/apache.md

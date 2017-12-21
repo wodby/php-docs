@@ -51,3 +51,4 @@ pages:
       - Permissions issues: local/permissions.md
       - Import and export: local/import-export.md
       - For macOS users: local/docker-for-mac.md
+      - Xdebug: local/xdebug.md
