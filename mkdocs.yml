@@ -1,17 +1,14 @@
 site_name: PHP stack documentation
-site_url:
+site_url: https://wodby.com
 repo_url: https://github.com/wodby/php-docs
 site_description: PHP stack documentation
 site_author: Wodby Inc
 copyright: Wodby Inc
 
-# output directory:
-site_dir: ../build/docs/1.0
-docs_dir: "1.0"
-
 theme:
-  name: readthedocs
-  custom_dir: theme
+  name: material
+  feature:
+    tabs: true
 markdown_extensions:
   - markdown_include.include
   - markdown.extensions.admonition
@@ -22,9 +19,14 @@ extra_javascript: []
 extra:
     version: 1.0
 pages:
-    - Overview: index.md
-    - Local environment: local.md
+    - Main: index.md
+    - Backups: backups.md
+    - Deployment: deployment.md
+    - Import: import.md
+    - Instance types: instance-types.md
+    - Mail delivery: mail-delivery.md
     - Containers:
+      - Overview: containers/index.md
       - Apache: containers/apache.md
       - AthenaPDF: containers/athenapdf.md
       - Blackfire: containers/blackfire.md
@@ -40,3 +42,11 @@ pages:
       - Solr: containers/solr.md
       - SSH: containers/ssh.md
       - Webgrind: containers/webgrind.md
+    - Local environment:
+      - Overview: local/index.md
+      - Quick start: local/quick-start.md
+      - Domains: local/domains.md
+      - Multiple projects: local/multiple-projects.md
+      - Permissions issues: local/permissions.md
+      - Import and export: local/import-export.md
+      - For macOS users: local/docker-for-mac.md

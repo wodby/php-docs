@@ -1,8 +1,6 @@
-# MariaDB
+# Importing and exporting data
 
-You can configure MariaDB via environment variables that listed at [https://github.com/wodby/mariadb](https://github.com/wodby/mariadb)
-
-## Local environment 
+## MariaDB
 
 ### Import existing database
 
@@ -20,4 +18,6 @@ Exporting a specific database:
 docker-compose exec mariadb sh -c 'exec mysqldump -uroot -p"root-password" my-db' > my-db.sql
 ```
 
-For more details see [MariaDB stack](https://cloud.wodby.com/stackhub/3aa42a7c-db8b-40e9-aa3c-06218724fae6)
+## Postgres
+
+if you want to import your database, uncomment the line for `postgres-init` volume in your compose file. Create the volume directory `./postgres-init` in the same directory as the compose file and put there your `.sql .sql.gz .sh` file(s). All SQL files will be automatically imported once MariaDB container has started.

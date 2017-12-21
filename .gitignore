@@ -1,5 +1,2 @@
 .idea/
-build
-
-# mkdocs
-docs/latest.yaml
+site
