@@ -2,8 +2,8 @@ site_name: PHP stack documentation
 site_url: https://wodby.com
 repo_url: https://github.com/wodby/php-docs
 site_description: PHP stack documentation
-site_author: Wodby Inc
-copyright: Wodby Inc
+site_author: Wodby, Inc.
+copyright: Wodby, Inc.
 
 theme:
   name: material
