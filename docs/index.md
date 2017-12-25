@@ -18,7 +18,7 @@
 [Webgrind]: containers/webgrind.md
 [Blackfire]: containers/blackfire.md
 [Rsyslog]: containers/rsyslog.md
-[AthenaPDF]: https://cloud.wodby.com/stackhub/249c859b-9368-41cc-b6a6-6148e6a77337
+[AthenaPDF]: containers/athenapdf.md
 
 | Container | Description |
 | --------- | ----------- |
