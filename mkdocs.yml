@@ -3,8 +3,6 @@ site_description: PHP stack documentation
 site_author: Wodby, Inc.
 site_url: https://wodby.com/stacks/php/docs
 
-stack_url: https://cloud.wodby.com/stackhub
-
 repo_name: wodby/php-docs
 repo_url: https://github.com/wodby/php-docs
 
@@ -18,6 +16,7 @@ extra:
       link: https://github.com/wodby
     - type: twitter
       link: https://twitter.com/WodbyHQ
+  stack_url: https://cloud.wodby.com/stackhub
 
 theme:
   name: material

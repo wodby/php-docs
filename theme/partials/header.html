@@ -22,9 +22,9 @@
               <span class="md-header-nav__topic">
                 {{ config.site_name }}
 
-                {% if config.stack_url %}
+                {% if config.extra.stack_url %}
                 <span class="external-icon">
-                    <a href="{{ config.stack_url }}" class="stack-page-link" target="_blank">See all stacks</a>
+                    <a href="{{ config.extra.stack_url }}" class="stack-page-link" target="_blank">See all stacks</a>
                 </span>
                 {% endif %}
               </span>
