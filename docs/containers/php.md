@@ -1,6 +1,6 @@
 # PHP
 
-You can configure PHP via environment variables that listed at [https://github.com/wodby/php](https://github.com/wodby/php#environment-variables)
+You can configure PHP via environment variables that listed at https://github.com/wodby/php
 
 ## Composer
 

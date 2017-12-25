@@ -3,6 +3,8 @@ site_description: PHP stack documentation
 site_author: Wodby, Inc.
 site_url: https://wodby.com/stacks/php/docs
 
+stack_url: https://cloud.wodby.com/stackhub
+
 repo_name: wodby/php-docs
 repo_url: https://github.com/wodby/php-docs
 
@@ -21,16 +23,41 @@ theme:
   name: material
   feature:
     tabs: true
-markdown_extensions:
-  - markdown_include.include
-  - markdown.extensions.admonition
-  - def_list
-  - footnotes
-  - codehilite
-extra_css: []
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+#  logo: assets/images/wodby-logo.png
+  custom_dir: 'theme'
+
+extra_css: ["assets/wodby.css"]
 extra_javascript: []
-extra:
-    version: 1.0
+
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
 pages:
     - Main: index.md
     - Backups: backups.md

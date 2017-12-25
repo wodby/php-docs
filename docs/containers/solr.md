@@ -1,6 +1,6 @@
 # Solr
 
-You can configure Solr via environment variables that listed at [https://github.com/wodby/solr](https://github.com/wodby/solr)
+You can configure Solr via environment variables that listed at https://github.com/wodby/solr
 
 You can find URL to Solr admin UI from under Domains tab.
 

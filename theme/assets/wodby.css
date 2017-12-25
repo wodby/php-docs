@@ -1,0 +1,23 @@
+.md-header-nav__button.md-logo img {
+    width: 125px;
+}
+
+.stack-page-link {
+    float: right;
+    margin-right: 20px;
+    font-size: 1.4rem;
+}
+
+.md-content [href^="http://"]:not(.md-icon)::after,
+.md-content [href^="https://"]:not(.md-icon)::after,
+.external-icon [href^="http://"]:not(.md-icon)::after,
+.external-icon [href^="https://"]:not(.md-icon)::after {
+    content: "\f08e";
+    font-family: FontAwesome;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    padding-left: 5px;
+    line-height: 10px;
+}
+

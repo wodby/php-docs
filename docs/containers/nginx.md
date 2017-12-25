@@ -1,6 +1,6 @@
 # Nginx
 
-You can configure Nginx via environment variables that listed at [https://github.com/wodby/nginx](https://github.com/wodby/nginx#environment-variables)
+You can configure Nginx via environment variables that listed at https://github.com/wodby/nginx
 
 If the default config and available environment variables are not enough for your customizations you can replace the config with your own:
 

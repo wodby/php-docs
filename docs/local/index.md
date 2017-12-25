@@ -9,22 +9,22 @@ Docker4PHP is an open-source project ([GitHub page](https://github.com/wodby/doc
 
 The PHP stack consist of the following containers:
 
-[Nginx]: /containers/nginx.md
-[Apache]: /containers/apache.md
-[AthenaPDF]: /containers/athenapdf.md
-[PHP]: /containers/php.md
-[SSHD]: /containers/ssh.md
-[Cron]: /containers/cron.md
-[MariaDB]: /containers/mariadb.md
-[PostgreSQL]: /containers/postgres.md
-[Redis]: /containers/redis.md
-[Solr]: /containers/solr.md
-[Memcached]: /containers/memcached.md
-[OpenSMTPD]: /containers/opensmtpd.md
-[Webgrind]: /containers/webgrind.md
-[Blackfire]: /containers/blackfire.md
-[Rsyslog]: /containers/rsyslog.md
-[AthenaPDF]: https://cloud.wodby.com/stackhub/249c859b-9368-41cc-b6a6-6148e6a77337
+[Nginx]: ../containers/nginx.md
+[Apache]: ../containers/apache.md
+[AthenaPDF]: ../containers/athenapdf.md
+[PHP]: ../containers/php.md
+[SSHD]: ../containers/ssh.md
+[Cron]: ../containers/cron.md
+[MariaDB]: ../containers/mariadb.md
+[PostgreSQL]: ../containers/postgres.md
+[Redis]: ../containers/redis.md
+[Solr]: ../containers/solr.md
+[Memcached]: ../containers/memcached.md
+[OpenSMTPD]: ../containers/opensmtpd.md
+[Webgrind]: ../containers/webgrind.md
+[Blackfire]: ../containers/blackfire.md
+[Rsyslog]: ../containers/rsyslog.md
+[AthenaPDF]: ../containers/athenapdf.md
 
 [wodby/php-nginx]: https://github.com/wodby/php-nginx
 [wodby/php-apache]: https://github.com/wodby/php-apache
