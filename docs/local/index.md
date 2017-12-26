@@ -7,8 +7,6 @@ Docker4PHP is an open-source project ([GitHub page](https://github.com/wodby/doc
 * Install Docker ([Linux](https://docs.docker.com/engine/installation), [Docker for Mac](https://docs.docker.com/engine/installation/mac) or [Docker for Windows (10+ Pro)](https://docs.docker.com/engine/installation/windows))
 * For Linux additionally install [docker compose](https://docs.docker.com/compose/install)
 
-The PHP stack consist of the following containers:
-
 [Nginx]: ../containers/nginx.md
 [Apache]: ../containers/apache.md
 [AthenaPDF]: ../containers/athenapdf.md
@@ -45,6 +43,8 @@ The PHP stack consist of the following containers:
 [portainer/portainer]: https://hub.docker.com/portainer/portainer
 [_/node]: https://hub.docker.com/_/node
 [_/traefik]: https://hub.docker.com/_/traefik
+
+The `docker-compose.yml` file provides the following services:
 
 | Container    | Versions           | Service name | Image                              | 
 | ------------ | ------------------ | ------------ | ---------------------------------- | 

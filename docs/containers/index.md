@@ -2,6 +2,26 @@
 
 The PHP stack consist of the following containers:
 
+| Container    | Versions           | Image                              |
+| ------------ | ------------------ | ---------------------------------- |
+| [Nginx]      | 1.13, 1.12         | [wodby/php-nginx]                  |
+| [Apache]     | 2.4                | [wodby/php-apache]                 |
+| [PHP]        | 7.1, 7.0, 5.6, 5.3 | [wodby/php]                        |
+| [MariaDB]    | 10.2, 10.1         | [wodby/mariadb]                    |
+| [PostgreSQL] | 10.1, 9.6          | [wodby/postgres]                   |
+| [Redis]      | 4.0, 3.2           | [wodby/redis]                      |
+| [Solr]       | 7.x, 6.x, 5.5, 5.4 | [wodby/solr]                       |
+| [Webgrind]   | 1.5                | [wodby/webgrind]                   |
+| [Blackfire]  | latest             | [blackfire/blackfire]              |
+| [Rsyslog]    | latest             | [wodby/rsyslog]                    |
+| [AthenaPDF]  | 2.10.0             | [arachnysdocker/athenapdf-service] |
+| Mailhog      | latest             | [mailhog/mailhog]                  |
+| Adminer      | 4.3                | [wodby/adminer]                    |
+| phpMyAdmin   | latest             | [phpmyadmin/phpmyadmin]            |
+
+!!! note "SSHD and Cron":
+    For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP service will be automatically passed to [SSHD] and [Cron] services.
+
 [Nginx]:  ../containers/nginx.md
 [Apache]:  ../containers/apache.md
 [AthenaPDF]:  ../containers/athenapdf.md
@@ -18,7 +38,6 @@ The PHP stack consist of the following containers:
 [Blackfire]:  ../containers/blackfire.md
 [Rsyslog]:  ../containers/rsyslog.md
 [AthenaPDF]: ../containers/athenapdf.md
-
 [wodby/php-nginx]: https://github.com/wodby/php-nginx
 [wodby/php-apache]: https://github.com/wodby/php-apache
 [wodby/php]: https://github.com/wodby/php
@@ -35,36 +54,3 @@ The PHP stack consist of the following containers:
 [mailhog/mailhog]: https://hub.docker.com/r/mailhog/mailhog
 [wodby/adminer]: https://hub.docker.com/r/wodby/adminer
 [phpmyadmin/phpmyadmin]: https://hub.docker.com/r/phpmyadmin/phpmyadmin
-[portainer/portainer]: https://hub.docker.com/portainer/portainer
-[_/node]: https://hub.docker.com/_/node
-[_/traefik]: https://hub.docker.com/_/traefik
-
-| Container    | Versions           | Service name | Image                              |
-| ------------ | ------------------ | ------------ | ---------------------------------- |
-| [Nginx]      | 1.13, 1.12         | `nginx`      | [wodby/php-nginx]                  |
-| [Apache]     | 2.4                | `apache`     | [wodby/php-apache]                 |
-| [PHP]        | 7.1, 7.0, 5.6, 5.3 | `php`        | [wodby/php]                        |
-| [MariaDB]    | 10.2, 10.1         | `mariadb`    | [wodby/mariadb]                    |
-| [PostgreSQL] | 10.1, 9.6          | `postgres`   | [wodby/postgres]                   |
-| [Redis]      | 4.0, 3.2           | `redis`      | [wodby/redis]                      |
-| Varnish      | 4.1                | `varnish`    | [wodby/varnish]                    |
-| [Solr]       | 7.x, 6.x, 5.5, 5.4 | `solr`       | [wodby/solr]                       |
-| [Memcached]  | 1.4                | `memcached`  | [wodby/memcached]                  |
-| [Webgrind]   | 1.5                | `webgrind`   | [wodby/webgrind]                   |
-| [Blackfire]  | latest             | `blackfire`  | [blackfire/blackfire]              |
-| [Rsyslog]    | latest             | `rsyslog`    | [wodby/rsyslog]                    |
-| [AthenaPDF]  | 2.10.0             | `athenapdf`  | [arachnysdocker/athenapdf-service] |
-| Mailhog      | latest             | `mailhog`    | [mailhog/mailhog]                  |
-| Adminer      | 4.3                | `adminer`    | [wodby/adminer]                    |
-| phpMyAdmin   | latest             | `pma`        | [phpmyadmin/phpmyadmin]            |
-
-!!! note "SSHD and Cron":
-    For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP service will be automatically passed to [SSHD] and [Cron] services.
-
-Additional containers for local environment:
-
-| Container    | Versions           | Service name | Image                              |
-| ------------ | ------------------ | ------------ | ---------------------------------- |
-| Node         | latest             | `node`       | [_/node]                           |
-| Portainer    | latest             | `portainer`  | [portainer/portainer]              |
-| Traefik      | latest             | `traefik`    | [_/traefik]                        |

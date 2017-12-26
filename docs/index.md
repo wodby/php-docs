@@ -1,4 +1,4 @@
-# Overview
+# Home
 
 !!! info "IMPORTANT":
     PHP stack is not yet available for deployment via [Wodby](https://wodby.com). But you already can use it for local development with [Docker4PHP](local/index.md)
@@ -7,8 +7,6 @@
 [Apache]: containers/apache.md
 [AthenaPDF]: containers/athenapdf.md
 [PHP]: containers/php.md
-[SSHD]: containers/ssh.md
-[Cron]: containers/cron.md
 [MariaDB]: containers/mariadb.md
 [PostgreSQL]: containers/postgres.md
 [Redis]: containers/redis.md

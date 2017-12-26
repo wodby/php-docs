@@ -58,7 +58,7 @@ markdown_extensions:
   - pymdownx.tilde
 
 pages:
-    - Main: index.md
+    - Home: index.md
     - Backups: backups.md
     - Deployment: deployment.md
     - Import: import.md
@@ -71,6 +71,7 @@ pages:
       - Blackfire: containers/blackfire.md
       - Cron: containers/cron.md
       - Nginx: containers/nginx.md
+      - Mailhog: containers/mailhog.md
       - MariaDB: containers/mariadb.md
       - Memcached: containers/memcached.md
       - OpenSMTPD: containers/opensmtpd.md
