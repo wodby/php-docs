@@ -17,6 +17,8 @@ You can stop containers by executing:
 docker-compose stop
 ```
 
+Have a problem? Submit a new issue on [GitHub](https://github.com/wodby/docker4php/issues) or ask [community on Slack](http://slack.wodby.com)
+
 !!! tip "Permissions issues":
     To avoid potential problems with permissions between your host and containers please follow [these instructions](permissions.md)
 
