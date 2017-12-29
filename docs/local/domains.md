@@ -11,6 +11,7 @@ Add `127.0.0.1 php.docker.localhost` to your `/etc/hosts` file (some browsers li
 | adminer      | http://adminer.php.docker.localhost:8000   |
 | mailhog      | http://mailhog.php.docker.localhost:8000   |
 | solr         | http://solr.php.docker.localhost:8000      |
+| kibana       | http://kibana.php.docker.localhost:8000    |
 | node         | http://front.php.docker.localhost:8000     |
 | varnish      | http://varnish.php.docker.localhost:8000   |
 | portainer    | http://portainer.php.docker.localhost:8000 |

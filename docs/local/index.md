@@ -17,6 +17,8 @@ Docker4PHP is an open-source project ([GitHub page](https://github.com/wodby/doc
 [PostgreSQL]: ../containers/postgres.md
 [Redis]: ../containers/redis.md
 [Solr]: ../containers/solr.md
+[Elasticsearch]: ../containers/elasticsearch.md
+[Kibana]: ../containers/kibana.md
 [Memcached]: ../containers/memcached.md
 [OpenSMTPD]: ../containers/opensmtpd.md
 [Webgrind]: ../containers/webgrind.md
@@ -34,6 +36,8 @@ Docker4PHP is an open-source project ([GitHub page](https://github.com/wodby/doc
 [wodby/solr]: https://github.com/wodby/solr
 [wodby/memcached]: https://github.com/wodby/memcached
 [wodby/webgrind]: https://hub.docker.com/r/wodby/webgrind
+[wodby/elasticsearch]: https://github.com/wodby/elasticsearch
+[wodby/kibana]: https://github.com/wodby/kibana
 [blackfire/blackfire]: https://hub.docker.com/r/blackfire/blackfire
 [wodby/rsyslog]: https://hub.docker.com/r/wodby/rsyslog
 [arachnysdocker/athenapdf-service]: https://hub.docker.com/r/arachnysdocker/athenapdf-service
@@ -46,24 +50,26 @@ Docker4PHP is an open-source project ([GitHub page](https://github.com/wodby/doc
 
 The `docker-compose.yml` file provides the following services:
 
-| Container    | Versions           | Service name | Image                              | 
-| ------------ | ------------------ | ------------ | ---------------------------------- | 
-| [Nginx]      | 1.13, 1.12         | `nginx`      | [wodby/php-nginx]                  | 
-| [Apache]     | 2.4                | `apache`     | [wodby/php-apache]                 | 
-| [PHP]        | 7.1, 7.0, 5.6, 5.3 | `php`        | [wodby/php]                        | 
-| [MariaDB]    | 10.2, 10.1         | `mariadb`    | [wodby/mariadb]                    | 
-| [PostgreSQL] | 10.1, 9.6          | `postgres`   | [wodby/postgres]                   |
-| [Redis]      | 4.0, 3.2           | `redis`      | [wodby/redis]                      |
-| Varnish      | 4.1                | `varnish`    | [wodby/varnish]                    |
-| [Solr]       | 7.x, 6.x, 5.5, 5.4 | `solr`       | [wodby/solr]                       |
-| [Memcached]  | 1.4                | `memcached`  | [wodby/memcached]                  |
-| [Webgrind]   | 1.5                | `webgrind`   | [wodby/webgrind]                   |
-| [Blackfire]  | latest             | `blackfire`  | [blackfire/blackfire]              |
-| [Rsyslog]    | latest             | `rsyslog`    | [wodby/rsyslog]                    |
-| [AthenaPDF]  | 2.10.0             | `athenapdf`  | [arachnysdocker/athenapdf-service] |
-| Mailhog      | latest             | `mailhog`    | [mailhog/mailhog]                  | 
-| Adminer      | 4.3                | `adminer`    | [wodby/adminer]                    |
-| phpMyAdmin   | latest             | `pma`        | [phpmyadmin/phpmyadmin]            |
-| Node         | latest             | `node`       | [_/node]                           |
-| Portainer    | latest             | `portainer`  | [portainer/portainer]              | 
-| Traefik      | latest             | `traefik`    | [_/traefik]                        | 
+| Container       | Versions           | Service name    | Image                              |
+| --------------- | ------------------ | --------------- | ---------------------------------- |
+| [Nginx]         | 1.13, 1.12         | `nginx`         | [wodby/php-nginx]                  |
+| [Apache]        | 2.4                | `apache`        | [wodby/php-apache]                 |
+| [PHP]           | 7.1, 7.0, 5.6, 5.3 | `php`           | [wodby/php]                        |
+| [MariaDB]       | 10.2, 10.1         | `mariadb`       | [wodby/mariadb]                    |
+| [PostgreSQL]    | 10.1, 9.6          | `postgres`      | [wodby/postgres]                   |
+| [Redis]         | 4.0, 3.2           | `redis`         | [wodby/redis]                      |
+| Varnish         | 4.1                | `varnish`       | [wodby/varnish]                    |
+| [Solr]          | 7.x, 6.x, 5.5, 5.4 | `solr`          | [wodby/solr]                       |
+| [Elasticsearch] | 6.x, 5.5, 5.4      | `elasticsearch` | [wodby/elasticsearch]              |
+| [Kibana]        | 6.x, 5.5, 5.4      | `kibana`        | [wodby/kibana]                     |
+| [Memcached]     | 1.4                | `memcached`     | [wodby/memcached]                  |
+| [Webgrind]      | 1.5                | `webgrind`      | [wodby/webgrind]                   |
+| [Blackfire]     | latest             | `blackfire`     | [blackfire/blackfire]              |
+| [Rsyslog]       | latest             | `rsyslog`       | [wodby/rsyslog]                    |
+| [AthenaPDF]     | 2.10.0             | `athenapdf`     | [arachnysdocker/athenapdf-service] |
+| Mailhog         | latest             | `mailhog`       | [mailhog/mailhog]                  |
+| Adminer         | 4.3                | `adminer`       | [wodby/adminer]                    |
+| phpMyAdmin      | latest             | `pma`           | [phpmyadmin/phpmyadmin]            |
+| Node            | latest             | `node`          | [_/node]                           |
+| Portainer       | latest             | `portainer`     | [portainer/portainer]              |
+| Traefik         | latest             | `traefik`       | [_/traefik]                        |
