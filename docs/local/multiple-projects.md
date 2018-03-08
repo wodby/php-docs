@@ -12,7 +12,7 @@ Image: Multi-domain set-up example
 
 1. Create two dirs where you will host two projects. Let's name them _site1_ and _site2_
 2. Copy `docker-compose.yml` file to both dirs (_site1_ and _site2_)
-3. Download `traefik.yml` file from the [latest stable release](https://github.com/wodby/docker4php/releases) to the parent dir where _site1_ and _site2_ dirs are
+3. Download `traefik.yml` file (inside of `docker4php.tar.gz` archive) from the [latest stable release](https://github.com/wodby/docker4php/releases) to the parent dir where _site1_ and _site2_ dirs are
 4. Edit `traefik.yml` and change `project1-dir_default` to `site1_default` and `project2-dir_default` to `site2_default`. Those are docker networks names that are created automatically from the dir name where docker-compose.yml is located
 5. Edit site1's `docker-compose.yml` file. There are 3 main things that need to be done there:
     * In nginx service, under labels, change `traefik.backend=nginx` to `traefik.backend=site1_nginx_1`. This is the name of the container. You can see that under NAMES when your have the containers running by executing `docker ps`

@@ -1,14 +1,14 @@
-box: wodby/alpine:3.7-1.1.1
+box: wodby/alpine:3.7-1.2.0
 
 build:
   box:
-    id: python:2-alpine
+    id: python:2-alpine3.7
     cmd: /bin/sh
   steps:
     - script:
       name: build
       code: |
-        pip install mkdocs mkdocs-material markdown==2.6.7 markdown-include pygments
+        pip install mkdocs mkdocs-material tornado==4.4.2 markdown==2.6.7 markdown-include pygments
         apk add --update bash
         mkdocs build
 

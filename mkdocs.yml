@@ -91,5 +91,6 @@ pages:
       - Multiple projects: local/multiple-projects.md
       - Permissions issues: local/permissions.md
       - Import and export: local/import-export.md
+      - Make commands: local/make-commands.md
       - For macOS users: local/docker-for-mac.md
       - Xdebug: local/xdebug.md
