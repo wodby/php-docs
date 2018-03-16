@@ -62,6 +62,12 @@
 2. Restart containers (`make`)
 3. Allow listen connection for your IDE in `Windows Firewall > Allow an app ..`
 
+Also, you might need to add the following lines to your hosts file (see related [github issue](https://github.com/wodby/docker4drupal/issues/193)):
+```
+0.0.0.0			localhost
+10.0.75.1		localhost
+```
+
 ## IDE configuration to debug CLI requests
 
 ### PhpStorm
