@@ -30,6 +30,9 @@ Follow these steps to debug your application instance remotely with [xdebug](htt
 4. Start debugging in IDE
 5. Start your browser debug helper plugin ([Chrome](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) or [Firefox](https://addons.mozilla.org/en-us/firefox/addon/the-easiest-xdebug)) and open the page you want to debug
 
+!!! info "Debugging locally": 
+    To learn how to use xdebug locally see [this article](../local/xdebug.md) 
+
 ## Redirects
 
 If you need to make a redirect from one domain to another you can do it by customizing configuration files of nginx or by adding the snippets below to your `settings.php` file.

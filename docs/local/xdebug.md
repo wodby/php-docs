@@ -1,58 +1,75 @@
 # Xdebug
 
-If you want to use Xdebug, uncomment this line to enable it in the compose file before starting containers:
-```yml
-PHP_XDEBUG: 1                 # Enable Xdebug extension
-PHP_XDEBUG_DEFAULT_ENABLE: 1  # Comment out to disable (default).
-```
+## Debugging web requests
 
-If you would like to autostart xdebug, uncomment this line:
-```yml
-PHP_XDEBUG_REMOTE_AUTOSTART: 1     # Comment out to disable (default).
-```
+1. Uncomment these lines for PHP service in your docker-compose file
+    ```yml
+    PHP_XDEBUG: 1                 
+    PHP_XDEBUG_DEFAULT_ENABLE: 1
+    ```
+2. Restart containers (`make`)    
+3. Start debugging in IDE
+4. Start your browser debug helper plugin ([Chrome](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) or [Firefox](https://addons.mozilla.org/en-us/firefox/addon/the-easiest-xdebug)) and open the page you want to debug. Alternatively, enable auto start by adding `PHP_XDEBUG_REMOTE_AUTOSTART=1`
 
-## Xdebug on Mac OS X
+## Debugging CLI requests 
 
-There are two more things that need to be done on macOS in order to have Xdebug working (because there's no docker0 interface). Enable Xdebug as described in the previous section and uncomment the following two lines:
+1. Enable Xdebug as described in the previous section
+2. Uncomment the following environment variables for PHP service in your composer file
+    ```yml
+    PHP_XDEBUG_REMOTE_CONNECT_BACK: 0    
+    PHP_IDE_CONFIG: serverName=my-ide
+    ```
+3. [Configure your IDE](#ide-configuration-to-debug-cli-requests)
+4. Perform configuration as described below depending on your OS:
 
-```yml
-PHP_XDEBUG_REMOTE_CONNECT_BACK: 0         # Disabled for remote.host to work (enabled by default)
-PHP_XDEBUG_REMOTE_HOST: "10.254.254.254"  # Setting the host (localhost by default)
-```
+### Linux
 
-You also need to have loopback alias with IP from above. You need this only once and that settings stays active until logout or restart.
+1. Uncomment `PHP_XDEBUG_REMOTE_HOST: 172.17.0.1` for PHP service
+2. Restart containers (`make`)
 
-```bash
-sudo ifconfig lo0 alias 10.254.254.254
-```
-To add the loopback alias after a reboot, add the following contents to /Library/LaunchDaemons/docker4php.loopback.plist
+### macOS
 
-```xml
-<plist version="1.0">
-  <dict>
-    <key>Label</key>
-    <string>Default Loopback alias</string>
-    <key>ProgramArguments</key>
-    <array>
-      <string>/sbin/ifconfig</string>
-      <string>lo0</string>
-      <string>alias</string>
-      <string>10.254.254.254</string>
-      <string>netmask</string>
-      <string>255.255.255.0</string>
-    </array>
-    <key>RunAtLoad</key>
-    <true/>
-  </dict>
-</plist>
-```
+1. Uncomment `PHP_XDEBUG_REMOTE_HOST: 10.254.254.254` for PHP service (just a random IP that very likely won't be used by anything else).
+2. Restart containers (`make`)
+3. You also need to have loopback alias with IP from above. You need this only once and that settings stays active until logout or restart:
+    ```bash
+    sudo ifconfig lo0 alias 10.254.254.254
+    ```
+4. To add the loopback alias after a reboot, add the following contents to `/Library/LaunchDaemons/docker4php.loopback.plist`:
+    ```xml
+    <plist version="1.0">
+      <dict>
+        <key>Label</key>
+        <string>Default Loopback alias</string>
+        <key>ProgramArguments</key>
+        <array>
+          <string>/sbin/ifconfig</string>
+          <string>lo0</string>
+          <string>alias</string>
+          <string>10.254.254.254</string>
+          <string>netmask</string>
+          <string>255.255.255.0</string>
+        </array>
+        <key>RunAtLoad</key>
+        <true/>
+      </dict>
+    </plist>
+    ```
 
-## Xdebug on Windows
+### Windows
 
-You should do same things as for Mac OS. Enable Xdebug as described in the previous 2 sections and replace value of _PHP_XDEBUG_REMOTE_HOST_ to your DockerNAT ip assigned (by default it should be 10.0.75.1):
+1. Uncomment `PHP_XDEBUG_REMOTE_HOST: 10.0.75.1` for PHP service (default IP of Docker NAT).
+2. Restart containers (`make`)
+3. Allow listen connection for your IDE in `Windows Firewall > Allow an app ..`
 
-```yml
-PHP_XDEBUG_REMOTE_HOST: "10.0.75.1"  # Setting the host (localhost by default)
-```
+## IDE configuration to debug CLI requests
 
-You also need to check firewall not to block your connection. Disabling firewall should help.
+### PhpStorm
+
+1. Open `Run > Edit Configurations` from the main menu, choose `Defaults > PHP Web Page` in the left sidebar
+2. Click to `[...]` to the right of `Server` and add a new server
+    * Enter name `my-ide` (as specified in `PHP_IDE_CONFIG`)
+    * Enter any host, it does not matter
+    * Check `Use path mappings`, select path to your project and enter `/var/www/html` in the right column (Absolute path on the server) 
+3. Choose newly created server in "Server" for PHP Web Page
+4. Save settings
