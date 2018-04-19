@@ -19,7 +19,7 @@ The PHP stack consist of the following containers:
 | Adminer      | 4.3                | [wodby/adminer]                    |
 | phpMyAdmin   | latest             | [phpmyadmin/phpmyadmin]            |
 
-!!! note "SSHD and Cron":
+!!! note "SSHD and Cron"
     For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP service will be automatically passed to [SSHD] and [Cron] services.
 
 [Nginx]:  ../containers/nginx.md
