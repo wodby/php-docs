@@ -32,7 +32,7 @@ extra_css: ["assets/wodby.css"]
 extra_javascript: ["assets/intercom.js"]
 
 markdown_extensions:
-  - markdown.extensions.admonition
+  - admonition
   - markdown.extensions.codehilite:
       guess_lang: false
   - markdown.extensions.def_list
