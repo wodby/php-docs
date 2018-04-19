@@ -8,7 +8,7 @@ build:
     - script:
       name: build
       code: |
-        pip install mkdocs mkdocs-material markdown==2.6.7 markdown-include pygments
+        pip install mkdocs mkdocs-material markdown markdown-include pygments
         apk add --update bash
         mkdocs build
 
