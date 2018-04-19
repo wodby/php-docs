@@ -9,7 +9,6 @@ build:
       name: build
       code: |
         pip install mkdocs mkdocs-material markdown markdown-include pygments
-        apk add --update bash
         mkdocs build
 
 release:
