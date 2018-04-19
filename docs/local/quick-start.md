@@ -1,6 +1,6 @@
 # Quick start
 
-!!! danger "Persistence of database data":
+!!! danger "Persistence of database data"
     You will lose MariaDB / PostgreSQL data if you run `docker-compose down`. Instead use `docker-compose stop` to stop containers. Alternatively, you can use a manual volume for mariadb data (see compose file), this way your data will always persist. 
 
 1. Download `docker4php.tar.gz` from the [latest stable release](https://github.com/wodby/docker4php/releases) and unpack to your PHP project root
