@@ -6,15 +6,15 @@ By default `BASE_URL` set to `php.docker.localhost`, you can change it in `.env`
 
 Add `127.0.0.1 php.docker.localhost` to your `/etc/hosts` file (some browsers like Chrome may work without it). Do the same for other default domains you might need from listed below:  
 
-| Service      | Domain                            |
-| ------------ | --------------------------------- |
-| nginx/apache | http://${BASE_URL}:8000           |
-| pma          | http://pma.${BASE_URL}:8000       |
-| adminer      | http://adminer.${BASE_URL}:8000   |
-| mailhog      | http://mailhog.${BASE_URL}:8000   |
-| solr         | http://solr.${BASE_URL}:8000      |
-| kibana       | http://kibana.${BASE_URL}:8000    |
-| node         | http://front.${BASE_URL}:8000     |
-| varnish      | http://varnish.${BASE_URL}:8000   |
-| portainer    | http://portainer.${BASE_URL}:8000 |
-| webgrind     | http://webgrind.${BASE_URL}:8000  |
+| Service      | Domain                                     |
+| ------------ | ------------------------------------------ |
+| nginx/apache | http://php.docker.localhost:8000           |
+| pma          | http://pma.php.docker.localhost:8000       |
+| adminer      | http://adminer.php.docker.localhost:8000   |
+| mailhog      | http://mailhog.php.docker.localhost:8000   |
+| solr         | http://solr.php.docker.localhost:8000      |
+| kibana       | http://kibana.php.docker.localhost:8000    |
+| node         | http://front.php.docker.localhost:8000     |
+| varnish      | http://varnish.php.docker.localhost:8000   |
+| portainer    | http://portainer.php.docker.localhost:8000 |
+| webgrind     | http://webgrind.php.docker.localhost:8000  |
