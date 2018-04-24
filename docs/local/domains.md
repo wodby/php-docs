@@ -18,3 +18,4 @@ Add `127.0.0.1 php.docker.localhost` to your `/etc/hosts` file (some browsers li
 | varnish      | http://varnish.php.docker.localhost:8000   |
 | portainer    | http://portainer.php.docker.localhost:8000 |
 | webgrind     | http://webgrind.php.docker.localhost:8000  |
+
