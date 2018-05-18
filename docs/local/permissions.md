@@ -1,34 +1,24 @@
-# Docker for Mac Issues
+# Fixing Permissions Problems
 
-## Permissions issues
+You might have permissions issues caused by non-matching uid/gid on your host machine and the default user in php container.
 
-Use `-dev-macos` version of php image where default `wodby` user has `501:20` uid/gid that matches default macOS user. 
+## Linux
 
-## Poor volumes performance
+Since version 5.0 the default php container user `wodby` has uid/gid `1000` that matches the default uid/gid for most popular Linux distributions.  
 
-There 2 ways how can improve performance of docker volumes on macOS:
+## macOS
 
-### User-guided Caching
+Use `-dev-macos` version of php image where default `wodby` user has `501:20` uid/gid that matches default macOS user.
 
-Since Docker for Mac 17.06 there's a new `:cached` option available for volumes. You can find more information about this in [docker blog](https://blog.docker.com/2017/05/user-guided-caching-in-docker-for-mac).
+## Windows
 
-Replace _codebase_ volume definition of _php_ and _nginx_/_apache_ services with the option below marked as "User-guided caching". 
+Since you [can't change owner of mounted volumes](https://github.com/docker/for-win/issues/39) in Docker for Win, the only solution is to run everything as root, add the following options to `php` service in your docker-compose file:
 
-### Docker-sync
-
-The core idea of this project is to use an external volume that will sync your files with a file synchronizer tool.
-
-```bash
-$ gem install docker-sync
+```yml
+  php:
+    user: root
+    command: "php-fpm -R"
+    environment:
+      PHP_FPM_USER: root
+      PHP_FPM_GROUP: root
 ```
-
-1. Use `docker-sync.yml` file from the [latest stable release](https://github.com/wodby/docker4wordpress/releases)
-2. Uncomment _docker-sync_ volume definition in your compose file
-3. Replace _volumes_ definition of _php_ and _nginx_/_apache_ services with the option below marked as "Docker-sync".
-4. Start docker-sync: `docker-sync start`
-5. In a new shell run after you started docker-sync `docker-compose up -d`
-
-Now when you change your code on the host machine docker-sync will sync your data to php and nginx/apache containers.
-
-For more information visit [docker-sync project page](https://github.com/EugenMayer/docker-sync).
-

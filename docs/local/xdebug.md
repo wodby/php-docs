@@ -20,14 +20,19 @@
     PHP_IDE_CONFIG: serverName=my-ide
     ```
 3. [Configure your IDE](#ide-configuration-to-debug-cli-requests)
-4. Perform configuration as described below depending on your OS:
+4. Perform configuration as described below depending on your OS and Docker version:
 
-### Linux
+### Linux/macOS, Docker 18.03+
+
+1. Uncomment `PHP_XDEBUG_REMOTE_HOST: host.docker.internal` for PHP service
+2. Restart containers (`make`)
+
+### Linux, Docker < 18.03
 
 1. Uncomment `PHP_XDEBUG_REMOTE_HOST: 172.17.0.1` for PHP service
 2. Restart containers (`make`)
 
-### macOS
+### macOS, Docker < 18.03
 
 1. Uncomment `PHP_XDEBUG_REMOTE_HOST: 10.254.254.254` for PHP service (just a random IP that very likely won't be used by anything else).
 2. Restart containers (`make`)
@@ -35,7 +40,7 @@
     ```bash
     sudo ifconfig lo0 alias 10.254.254.254
     ```
-4. To add the loopback alias after a reboot, add the following contents to `/Library/LaunchDaemons/docker4php.loopback.plist`:
+4. To add the loopback alias after a reboot, add the following contents to `/Library/LaunchDaemons/docker4drupal.loopback.plist`:
     ```xml
     <plist version="1.0">
       <dict>
