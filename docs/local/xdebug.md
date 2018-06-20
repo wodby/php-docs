@@ -40,7 +40,7 @@
     ```bash
     sudo ifconfig lo0 alias 10.254.254.254
     ```
-4. To add the loopback alias after a reboot, add the following contents to `/Library/LaunchDaemons/docker4drupal.loopback.plist`:
+4. To add the loopback alias after a reboot, add the following contents to `/Library/LaunchDaemons/docker4php.loopback.plist`:
     ```xml
     <plist version="1.0">
       <dict>

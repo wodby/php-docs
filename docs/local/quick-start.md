@@ -13,7 +13,7 @@
 11. You can see status of your containers and their logs via portainer: http://portainer.php.docker.localhost:8000
 
 !!! info "Optional files"
-    If you don't need to [run multiple projects](multiple-projects.md) and don't use [docker-sync to improve volumes performance on macOS](docker-for-mac.md) feel free to delete `traefik.yml` and `docker-sync.yml` that come with the `docker4wordpress.tar.gz`
+    If you don't need to [run multiple projects](multiple-projects.md) and don't use [docker-sync to improve volumes performance on macOS](docker-for-mac.md) feel free to delete `traefik.yml` and `docker-sync.yml` that come with the `docker4php.tar.gz`
 
 You can stop containers by executing `docker-compose stop` or `make stop`
 
