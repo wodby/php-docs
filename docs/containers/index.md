@@ -4,11 +4,11 @@ The PHP stack consist of the following containers:
 
 | Container    | Versions           | Image                              |
 | ------------ | ------------------ | ---------------------------------- |
-| [Nginx]      | 1.13, 1.12         | [wodby/php-nginx]                  |
+| [Nginx]      | 1.15, 1.14, 1.13   | [wodby/php-nginx]                  |
 | [Apache]     | 2.4                | [wodby/php-apache]                 |
-| [PHP]        | 7.1, 7.0, 5.6, 5.3 | [wodby/php]                        |
-| [MariaDB]    | 10.2, 10.1         | [wodby/mariadb]                    |
-| [PostgreSQL] | 10.1, 9.6          | [wodby/postgres]                   |
+| [PHP]        | 7.x, 5.6, 5.3      | [wodby/php]                        |
+| [MariaDB]    | 10.3, 10.2, 10.1   | [wodby/mariadb]                    |
+| [PostgreSQL] | 10, 9.x            | [wodby/postgres]                   |
 | [Redis]      | 4.0, 3.2           | [wodby/redis]                      |
 | [Solr]       | 7.x, 6.x, 5.5, 5.4 | [wodby/solr]                       |
 | [Webgrind]   | 1.5                | [wodby/webgrind]                   |

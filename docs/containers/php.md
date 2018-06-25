@@ -8,7 +8,7 @@ Composer package `hirak/prestissimo:^0.3` installed globally for www-data user t
 
 ## Environment variables
 
-In addition to [global environment variables](https://docs.wodby.com/infrastructure/environment-variables.html), we provide the following variables in PHP container that you can use in your post-deployment scripts:
+In addition to [global environment variables](https://help.wodby.com/infrastructure/environment-variables), we provide the following variables in PHP container that you can use in your post-deployment scripts:
 
 | Variable              | Description                                                      |
 | --------------------- | ---------------------------------------------------------------- |
@@ -71,3 +71,7 @@ Redirect from HTTP to HTTPS can be enabled on a domain edit page from the dashbo
 ## NewRelic APM monitoring
 
 You can add NewRelic APM monitoring for PHP by adding environment variables `PHP_NEWRELIC_ENABLED=1` and `PHP_NEWRELIC_LICENSE` with your license number to PHP-FPM container. Application name will be automatically set to `[Wodby Application Name] - [Wodby Instance Name]`, if you want to change it, use `PHP_NEWRELIC_APPNAME`. 
+
+## Profiling
+
+You can profile your PHP application either via Xdebug traces (+[Webgrind](webgrind.md)) or Tideways XHProf extensions.

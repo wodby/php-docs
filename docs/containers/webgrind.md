@@ -1,6 +1,6 @@
 # Webgrind
 
-Webgrind allows you view and analyze Xdebug profiler output and generate call graphs for visualisation. To use Webgrind first enable Xdebug profiler by [adding the following environment variables](https://docs.wodby.com/stacks/configuration.html) to your PHP container:
+Webgrind allows you view and analyze Xdebug profiler output and generate call graphs for visualisation. To use Webgrind first enable Xdebug profiler by [adding the following environment variables](https://help.wodby.com/stacks/stack-configuration) to your PHP container:
 
 ```
 PHP_XDEBUG: 1
