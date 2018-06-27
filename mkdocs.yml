@@ -25,7 +25,6 @@ theme:
   palette:
     primary: 'indigo'
     accent: 'indigo'
-#  logo: assets/images/wodby-logo.png
   custom_dir: 'theme'
 
 extra_css: ["assets/wodby.css"]
