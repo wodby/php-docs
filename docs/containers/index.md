@@ -7,7 +7,7 @@ The PHP stack consist of the following containers:
 | [Apache]     | 2.4                | [wodby/php-apache]                 |
 | [AthenaPDF]  | 2.10.0             | [arachnysdocker/athenapdf-service] |
 | [Blackfire]  | latest             | [blackfire/blackfire]              |
-| [Crond]      | -//-               | [wodby/php]                        |
+| [Crond]      | -                  | [wodby/php]                        |
 | [Mailhog]    | latest             | [mailhog/mailhog]                  |
 | [MariaDB]    | 10.3, 10.2, 10.1   | [wodby/mariadb]                    |
 | [Memcached]  | 1.5                | [wodby/memcached]                  |
@@ -18,11 +18,11 @@ The PHP stack consist of the following containers:
 | [PostgreSQL] | 10, 9.x            | [wodby/postgres]                   |
 | [Redis]      | 4.0, 3.2           | [wodby/redis]                      |
 | [Rsyslog]    | latest             | [wodby/rsyslog]                    |
-| [Solr]       | 7.x, 6.x, 5.5, 5.4 | [wodby/solr]                       |
-| [SSHD]       | -//-               | [wodby/php]                        |
+| [Solr]       | 7.x, 6.6, 5.5, 5.4 | [wodby/solr]                       |
+| [SSHD]       | -                  | [wodby/php]                        |
 | [Varnish]    | 4.1                | [wodby/varnish]                    |
 | [Webgrind]   | 1.5                | [wodby/webgrind]                   |
-| Adminer      | 4.3                | [wodby/adminer]                    |
+| Adminer      | 4.6                | [wodby/adminer]                    |
 | phpMyAdmin   | latest             | [phpmyadmin/phpmyadmin]            |
 
 !!! note "SSHD and Cron"
@@ -31,7 +31,7 @@ The PHP stack consist of the following containers:
 [Apache]:  ../containers/apache.md
 [AthenaPDF]:  ../containers/athenapdf.md
 [Blackfire]:  ../containers/blackfire.md
-[Cron]:  ../containers/cron.md
+[Crond]:  ../containers/cron.md
 [Mailhog]:  ../containers/mailhog.md
 [MariaDB]:  ../containers/mariadb.md
 [Memcached]:  ../containers/memcached.md
